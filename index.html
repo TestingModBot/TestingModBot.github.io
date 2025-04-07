@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Potty - The Ultimate Discord Moderation Bot</title>
-    
+
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
@@ -18,10 +18,16 @@
         padding: 0;
         box-sizing: border-box;
       }
+
+      img {
+        height: 40px;
+        border-radius: 50%;
+      }
+
       body {
-        font-family: 'Poppins', sans-serif;
-        background: #0c0c0f;
-        color: #fff;
+        font-family: "Poppins", sans-serif;
+        background: #f4e0c7;
+        color: #9a8073;
         overflow-x: hidden;
       }
       a {
@@ -45,8 +51,8 @@
         max-width: 1200px;
         padding: 10px 20px;
         border-radius: 12px;
-        background: rgba(20, 20, 24, 0.5); /* Transparent background */
-        backdrop-filter: blur(10px);       /* Subtle blur for modern effect */
+        background: rgba(222, 196, 181, 0.8); /* Semi-transparent tan */
+        backdrop-filter: blur(10px);
         z-index: 9999;
       }
       .logo {
@@ -54,26 +60,27 @@
         align-items: center;
         gap: 10px;
       }
-      /* Inline SVG for the custom ModCord logo */
-      .logo svg {
+      .logo svg,
+      .logo img {
         width: 40px;
         height: 40px;
       }
       .logo-text {
         font-size: 1.5rem;
         font-weight: 600;
+        color: #9a8073;
       }
       .nav-links {
         display: flex;
         gap: 2rem;
       }
       .nav-links a {
-        color: #ccc;
+        color: #9a8073;
         font-size: 1rem;
         transition: color 0.3s ease;
       }
       .nav-links a:hover {
-        color: #fff;
+        color: #dec4b5;
       }
 
       /* ========== HERO SECTION ========== */
@@ -83,34 +90,31 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 140px 20px 100px; /* Extra top padding to avoid navbar overlap */
+        padding: 140px 20px 100px;
         overflow: hidden;
-        /* Background layering for a modern swirl effect */
-        background: 
-          radial-gradient(circle at 10% 20%, rgba(134, 51, 238, 0.7) 0%, transparent 50%),
-          radial-gradient(circle at 90% 50%, rgba(61, 42, 101, 0.7) 0%, transparent 50%),
-          linear-gradient(120deg, #0c0c0f 0%, #141418 100%);
+        background: linear-gradient(135deg, #d7e5ee 0%, #dec4b5 81%);
       }
       .hero h1 {
         font-size: 3rem;
         max-width: 800px;
         margin-bottom: 20px;
         font-weight: 600;
+        color: #9a8073;
       }
       .hero p {
         max-width: 600px;
         font-size: 1.2rem;
-        color: #ccc;
+        color: #9a8073;
         margin-bottom: 40px;
         line-height: 1.5;
       }
       .hero .cta-button {
-        background: linear-gradient(135deg, #8833ee, #5b3dc1);
+        background: linear-gradient(135deg, #9a8073, #dec4b5);
         padding: 15px 30px;
         border-radius: 8px;
         font-size: 1.2rem;
         font-weight: 600;
-        color: #fff;
+        color: #f4e0c7;
         transition: opacity 0.3s ease;
       }
       .hero .cta-button:hover {
@@ -127,6 +131,7 @@
         text-align: center;
         font-size: 2rem;
         margin-bottom: 30px;
+        color: #9a8073;
       }
       .feature-grid {
         display: grid;
@@ -134,9 +139,8 @@
         gap: 30px;
       }
       .feature-card {
-        /* Subtle purple/black gradient */
-        background: linear-gradient(135deg, #201b2d, #161324);
-        border: 1px solid #2a2a2a;  /* Slight border for definition */
+        background: #d7e5ee;
+        border: 1px solid #9a8073;
         border-radius: 10px;
         padding: 30px;
         text-align: center;
@@ -144,17 +148,16 @@
       }
       .feature-card:hover {
         transform: translateY(-5px);
-        /* Optional: a slight glow or shadow on hover */
-        box-shadow: 0 10px 20px rgba(136, 51, 238, 0.4);
+        box-shadow: 0 10px 20px rgba(154, 128, 115, 0.4);
       }
       .feature-card h3 {
         margin-bottom: 15px;
         font-size: 1.25rem;
         font-weight: 600;
-        color: #fff; /* Stands out more against the darker gradient */
+        color: #9a8073;
       }
       .feature-card p {
-        color: #ccc;
+        color: #9a8073;
         line-height: 1.6;
       }
 
@@ -168,10 +171,11 @@
       .how-it-works h2 {
         font-size: 2rem;
         margin-bottom: 10px;
+        color: #9a8073;
       }
       .how-it-works p {
         font-size: 1.1rem;
-        color: #ccc;
+        color: #9a8073;
         margin-bottom: 40px;
       }
       .hiw-steps {
@@ -180,7 +184,7 @@
         gap: 30px;
       }
       .hiw-step {
-        background: #141418;
+        background: #d7e5ee;
         border-radius: 10px;
         padding: 30px;
         transition: transform 0.3s ease;
@@ -190,7 +194,7 @@
       }
       .step-number {
         display: inline-block;
-        background: #8833ee;
+        background: #dec4b5;
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -198,22 +202,24 @@
         text-align: center;
         font-weight: 600;
         margin-bottom: 15px;
+        color: #9a8073;
       }
       .hiw-step h3 {
         font-size: 1.2rem;
         margin-bottom: 10px;
+        color: #9a8073;
       }
       .hiw-step p {
-        color: #ccc;
+        color: #9a8073;
         line-height: 1.5;
       }
 
       /* ========== CTA SECTION ========== */
       .cta-section {
-        background: linear-gradient(135deg, #6622cc, #3d2a65);
+        background: linear-gradient(135deg, #9a8073, #dec4b5);
         padding: 60px 20px;
         text-align: center;
-        color: #fff;
+        color: #f4e0c7;
       }
       .cta-section h2 {
         font-size: 2rem;
@@ -226,24 +232,24 @@
         line-height: 1.5;
       }
       .cta-section .cta-button {
-        background: #fff;
-        color: #3d2a65;
+        background: #f4e0c7;
+        color: #9a8073;
         padding: 15px 30px;
         border-radius: 8px;
         font-weight: 600;
         transition: background 0.3s ease;
       }
       .cta-section .cta-button:hover {
-        background: #f2f2f2;
+        background: #dec4b5;
       }
 
       /* ========== FOOTER ========== */
       footer {
-        background: #0c0c0f;
+        background: #9a8073;
         padding: 20px;
         text-align: center;
-        color: #666;
-        border-top: 1px solid #2a2a2a;
+        color: #f4e0c7;
+        border-top: 1px solid #dec4b5;
       }
       footer p {
         font-size: 0.9rem;
@@ -261,31 +267,11 @@
     </style>
   </head>
   <body>
-
     <!-- FLOATING NAVBAR -->
     <div class="navbar-container">
       <div class="logo">
         <!-- Inline SVG for a custom ModCord logo -->
-        <svg
-          viewBox="0 0 100 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <!-- Radial Gradient for the circle -->
-            <radialGradient id="grad" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#8833ee"/>
-              <stop offset="100%" stop-color="#6622cc"/>
-            </radialGradient>
-          </defs>
-          <!-- Outer Circle -->
-          <circle cx="50" cy="50" r="45" fill="url(#grad)" />
-          <!-- Stylized 'M' Path -->
-          <path
-            d="M25 70 L25 30 L40 50 L50 30 L60 50 L75 30 L75 70 Z"
-            fill="#fff"
-          />
-        </svg>
+        <img src="./image/potty.jpg" alt="Potty logo" />
         <span class="logo-text">Potty</span>
       </div>
       <ul class="nav-links">
@@ -299,14 +285,14 @@
     <section class="hero">
       <h1>Transform Your Discord Community with Powerful Moderation</h1>
       <p>
-        Easily keep your server safe, organized, and thriving with next-generation
-        moderation tools. Experience effortless administration, automated moderation,
-        and real-time analytics—all in one bot.
+        Easily keep your server safe, organized, and thriving with
+        next-generation moderation tools. Experience effortless administration,
+        automated moderation, and real-time analytics—all in one bot.
       </p>
-      <a 
-      class="cta-button"
-      href="https://discord.com/oauth2/authorize?client_id=1339200465262477384&permissions=8&integration_type=0&scope=bot"
-      target="_blank"
+      <a
+        class="cta-button"
+        href="https://discord.com/oauth2/authorize?client_id=1339200465262477384&permissions=8&integration_type=0&scope=bot"
+        target="_blank"
       >
         Add to Discord
       </a>
@@ -326,8 +312,8 @@
         <div class="feature-card">
           <h3>Real-Time Analytics</h3>
           <p>
-            Gain insight into user behavior with live dashboards that
-            track messages, bans, and more.
+            Gain insight into user behavior with live dashboards that track
+            messages, bans, and more.
           </p>
         </div>
         <div class="feature-card">
@@ -380,7 +366,6 @@
     </section>
 
     <!-- CTA SECTION -->
-   
     <section class="cta-section">
       <h2>Ready to Level Up Your Discord Server?</h2>
       <p>
@@ -389,9 +374,8 @@
         insights.
       </p>
       <a
-
+        class="cta-button"
         href="https://discord.com/oauth2/authorize?client_id=1339200465262477384&permissions=8&integration_type=0&scope=bot"
-   
       >
         Add Potty Now
       </a>
@@ -401,6 +385,5 @@
     <footer>
       <p>© 2025 Potty. All rights reserved.</p>
     </footer>
-
-</body>
+  </body>
 </html>
