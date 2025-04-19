@@ -11,266 +11,14 @@
       rel="stylesheet"
     />
 
-    <style>
-      /* Reset & Global */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      img {
-        height: 40px;
-        border-radius: 50%;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        background: #f4e0c7;
-        color: #9a8073;
-        overflow-x: hidden;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      ul {
-        list-style: none;
-      }
-
-      /* ========== FLOATING NAVBAR ========== */
-      .navbar-container {
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: calc(100% - 40px);
-        max-width: 1200px;
-        padding: 10px 20px;
-        border-radius: 12px;
-        background: rgba(222, 196, 181, 0.8); /* Semi-transparent tan */
-        backdrop-filter: blur(10px);
-        z-index: 9999;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .logo svg,
-      .logo img {
-        width: 40px;
-        height: 40px;
-      }
-      .logo-text {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #9a8073;
-      }
-      .nav-links {
-        display: flex;
-        gap: 2rem;
-      }
-      .nav-links a {
-        color: #9a8073;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-      }
-      .nav-links a:hover {
-        color: #dec4b5;
-      }
-
-      /* ========== HERO SECTION ========== */
-      .hero {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 140px 20px 100px;
-        overflow: hidden;
-        background: linear-gradient(135deg, #d7e5ee 0%, #dec4b5 81%);
-      }
-      .hero h1 {
-        font-size: 3rem;
-        max-width: 800px;
-        margin-bottom: 20px;
-        font-weight: 600;
-        color: #9a8073;
-      }
-      .hero p {
-        max-width: 600px;
-        font-size: 1.2rem;
-        color: #9a8073;
-        margin-bottom: 40px;
-        line-height: 1.5;
-      }
-      .hero .cta-button {
-        background: linear-gradient(135deg, #9a8073, #dec4b5);
-        padding: 15px 30px;
-        border-radius: 8px;
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #f4e0c7;
-        transition: opacity 0.3s ease;
-      }
-      .hero .cta-button:hover {
-        opacity: 0.9;
-      }
-
-      /* ========== FEATURES SECTION ========== */
-      .features {
-        padding: 60px 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .features h2 {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 30px;
-        color: #9a8073;
-      }
-      .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-      }
-      .feature-card {
-        background: #d7e5ee;
-        border: 1px solid #9a8073;
-        border-radius: 10px;
-        padding: 30px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(154, 128, 115, 0.4);
-      }
-      .feature-card h3 {
-        margin-bottom: 15px;
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: #9a8073;
-      }
-      .feature-card p {
-        color: #9a8073;
-        line-height: 1.6;
-      }
-
-      /* ========== HOW IT WORKS SECTION ========== */
-      .how-it-works {
-        padding: 60px 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-      }
-      .how-it-works h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        color: #9a8073;
-      }
-      .how-it-works p {
-        font-size: 1.1rem;
-        color: #9a8073;
-        margin-bottom: 40px;
-      }
-      .hiw-steps {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-      }
-      .hiw-step {
-        background: #d7e5ee;
-        border-radius: 10px;
-        padding: 30px;
-        transition: transform 0.3s ease;
-      }
-      .hiw-step:hover {
-        transform: translateY(-5px);
-      }
-      .step-number {
-        display: inline-block;
-        background: #dec4b5;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        font-weight: 600;
-        margin-bottom: 15px;
-        color: #9a8073;
-      }
-      .hiw-step h3 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-        color: #9a8073;
-      }
-      .hiw-step p {
-        color: #9a8073;
-        line-height: 1.5;
-      }
-
-      /* ========== CTA SECTION ========== */
-      .cta-section {
-        background: linear-gradient(135deg, #9a8073, #dec4b5);
-        padding: 60px 20px;
-        text-align: center;
-        color: #f4e0c7;
-      }
-      .cta-section h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-      }
-      .cta-section p {
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto 30px;
-        line-height: 1.5;
-      }
-      .cta-section .cta-button {
-        background: #f4e0c7;
-        color: #9a8073;
-        padding: 15px 30px;
-        border-radius: 8px;
-        font-weight: 600;
-        transition: background 0.3s ease;
-      }
-      .cta-section .cta-button:hover {
-        background: #dec4b5;
-      }
-
-      /* ========== FOOTER ========== */
-      footer {
-        background: #9a8073;
-        padding: 20px;
-        text-align: center;
-        color: #f4e0c7;
-        border-top: 1px solid #dec4b5;
-      }
-      footer p {
-        font-size: 0.9rem;
-      }
-
-      /* ========== RESPONSIVE ========== */
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2.2rem;
-        }
-        .nav-links {
-          gap: 1rem;
-        }
-      }
-    </style>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- FLOATING NAVBAR -->
+    <!-- ========== FLOATING NAVBAR ========== -->
     <div class="navbar-container">
       <div class="logo">
-        <!-- Inline SVG for a custom ModCord logo -->
+        <!-- Logo image -->
         <img src="./image/potty.jpg" alt="Potty logo" />
         <span class="logo-text">Potty</span>
       </div>
@@ -281,7 +29,7 @@
       </ul>
     </div>
 
-    <!-- HERO SECTION -->
+    <!-- ========== HERO SECTION ========== -->
     <section class="hero">
       <h1>Transform Your Discord Community with Powerful Moderation</h1>
       <p>
@@ -298,7 +46,7 @@
       </a>
     </section>
 
-    <!-- FEATURES SECTION -->
+    <!-- ========== FEATURES SECTION ========== -->
     <section class="features" id="features">
       <h2>Why Potty?</h2>
       <div class="feature-grid">
@@ -310,12 +58,11 @@
           </p>
         </div>
         <div class="feature-card">
-          <h3>Real-Time Analytics</h3>
+          <h3>Instant Moderation Commands</h3>
           <p>
-            Gain insight into user behavior with live dashboards that track
-            messages, bans, and more.
+            Use slash commands like <code>/kick</code>, <code>/ban</code>, <code>/mute</code>, and <code>/warn</code>—Potty makes powerful actions just a command away.
           </p>
-        </div>
+        </div>           
         <div class="feature-card">
           <h3>Customizable Commands</h3>
           <p>
@@ -333,7 +80,7 @@
       </div>
     </section>
 
-    <!-- HOW IT WORKS SECTION -->
+    <!-- ========== HOW IT WORKS SECTION ========== -->
     <section class="how-it-works">
       <h2>How It Works</h2>
       <p>Get up and running with Potty in just a few simple steps.</p>
@@ -356,16 +103,15 @@
         </div>
         <div class="hiw-step">
           <span class="step-number">3</span>
-          <h3>Monitor and Manage</h3>
+          <h3>Relax and Let Potty Work</h3>
           <p>
-            Access real-time analytics to track server health. Adjust settings
-            as needed, and let Potty handle the rest.
+            Sit back while Potty handles the kicks, bans, and warnings. It’s like having a full-time mod that never sleeps.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- CTA SECTION -->
+    <!-- ========== CTA SECTION ========== -->
     <section class="cta-section">
       <h2>Ready to Level Up Your Discord Server?</h2>
       <p>
@@ -380,10 +126,31 @@
         Add Potty Now
       </a>
     </section>
-
-    <!-- FOOTER -->
+<!-- ========== SUPPORT SECTION ========== -->
+<section class="support" id="support">
+  <h2>Need Help? We're Here!</h2>
+  <p>Feel free to reach out to our support team via Discord.</p>
+  <div class="support-grid">
+    <div class="support-card">
+      <h3>Support Contact</h3>
+      <p>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png"
+          alt="Discord icon"
+          style="height: 16px; vertical-align: middle; margin-right: 6px;"
+        />
+        <strong>Username:</strong> mk9131
+      </p>
+      <p>
+        Any issues or inquiries? Shoot us a message on Discord and we'll get back to you!
+      </p>
+    </div>
+  </div>
+</section>
+    <!-- ========== FOOTER ========== -->
     <footer>
       <p>© 2025 Potty. All rights reserved.</p>
     </footer>
   </body>
 </html>
+
